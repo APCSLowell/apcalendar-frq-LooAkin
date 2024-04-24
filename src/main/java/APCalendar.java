@@ -59,7 +59,7 @@ public class APCalendar
     int numDays = dayOfYear(month, day, year);
     if((isLeapYear(year))&&(numDays > 59))
       start++;
-    int dayOweek = (numDays % 7) + start;
+    int dayOweek = (numDays + start) % 7;
     return dayOweek;
   }
 }
